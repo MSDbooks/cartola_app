@@ -20,8 +20,8 @@ export class EscalacaoPage {
   mercado: MERCADO;
   escalacao = 'time';
   GLBID: string;
-    browser: any;
-
+  browser: any;
+  login: boolean;
 
 
   constructor(
@@ -34,6 +34,12 @@ export class EscalacaoPage {
     public toastCtrl: ToastController
   )
   {
+
+    const userToken = JSON.parse(localStorage.getItem('token')) as TokenGlobo;
+
+    if(userToken){
+      this.login = true;
+    }
 
     // this.freeService.getMercado().then(response =>
     //   {
@@ -105,6 +111,7 @@ export class EscalacaoPage {
       if(response.id === 'Authenticated')
       {
         localStorage.setItem('token', JSON.stringify(response));
+        this.login = !this.login;
       }
 
 

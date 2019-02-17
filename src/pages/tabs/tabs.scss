@@ -1,0 +1,46 @@
+
+
+ion-icon {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  background-size: 24px;
+
+  &[ng-reflect-name="times"] {
+      background-image: url('../assets/imgs/camisa_1.png');
+      &[ng-reflect-is-active="true"] {
+          background-image: url('../assets/imgs/camisa_1.png');
+      }
+  }
+
+  &[ng-reflect-name="jogadores"] {
+    background-image: url('../assets/imgs/jogador_color.png');
+    &[ng-reflect-is-active="true"] {
+        background-image: url('../assets/imgs/jogador_color.png');
+    }
+  }
+
+  &[ng-reflect-name="jogo"] {
+    background-image: url('../assets/imgs/bola_color.png');
+    &[ng-reflect-is-active="true"] {
+        background-image: url('../assets/imgs/bola_color.png');
+    }
+  }
+
+  &[ng-reflect-name="escalacao"] {
+    background-image: url('../assets/imgs/campo_color_2.png');
+    &[ng-reflect-is-active="true"] {
+        background-image: url('../assets/imgs/campo_color_2.png');
+    }
+  }
+
+  &[ng-reflect-name="ajustes"] {
+    background-image: url('../assets/imgs/config_40.png');
+    &[ng-reflect-is-active="true"] {
+        background-image: url('../assets/imgs/config_40.png');
+    }
+  }
+
+
+
+}

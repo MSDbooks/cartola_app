@@ -173,3 +173,17 @@ ion-toast.toast-md {
       color: #858585;
   }
 }
+
+
+
+/* ###### IMPORT IMAGE FROM ICON ######### */
+
+.campo_color_2 {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('../assets/imgs/campo_color_2.png');
+  height: 100%;
+  background-size:contain;
+  color: rgba(60, 60, 60, 0)!important;//We are using this to defeat the flam
+
+}
