@@ -1,0 +1,13 @@
+{
+  "name": "Churras_na_faixa",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://abc.localhost/api/"
+    }
+  ]
+}

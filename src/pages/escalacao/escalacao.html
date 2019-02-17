@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="escalacao" color="dark" (ionChange)="onSegmentChanged($event)">
+      <ion-segment-button value="time">
+        Time
+      </ion-segment-button>
+      <ion-segment-button value="mercado" >
+        Mercado
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="false" scroll="false" has-bouncing="false">
+
+  <div [ngSwitch]="escalacao">
+    <div *ngSwitchCase="'time'">
+      <ion-grid id="form" *ngIf='!login'>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col>
+            <button ion-button block outline color='dark' (click)='openII()'>LOGIN NO CARTOLA</button>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>   
+      </ion-grid >
+      <ion-grid *ngIf='login'>
+        <ion-row>
+          logado!!
+        </ion-row>
+      </ion-grid>
+
+    </div>
+    <div *ngSwitchCase="'mercado'">
+     <ion-list>
+     <!--  <ion-item *ngFor="let atleta of MERCADO.atletas">
+         <div>
+            Nome: {{atleta.nome}}
+         </div>
+       </ion-item> -->
+     </ion-list>
+    </div>
+
+  </div>
+
+</ion-content>
