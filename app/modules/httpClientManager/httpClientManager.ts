@@ -74,9 +74,9 @@ export class HttpClientManager {
             return;
         }
 
-        if (this.network.type === 'unknown'
+        if (!this.network.type || this.network.type === 'unknown'
             || this.network.type === 'none'
-            || !this.network.type) {
+             ) {
             return true;
         }
         else {

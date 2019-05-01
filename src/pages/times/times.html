@@ -5,5 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-  
+    <ion-searchbar
+    placeholder="Buscar time..."
+    [(ngModel)]="myInput"
+    [showCancelButton]="Cancelar"
+    (ionChange)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  <div>Nenhum time encontrado...</div>
+
+
 </ion-content>
