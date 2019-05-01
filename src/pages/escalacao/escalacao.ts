@@ -34,7 +34,9 @@ export class EscalacaoPage {
     public toastCtrl: ToastController
   )
   {
-
+    this.freeService.getStatusMercado().then((result)=>{
+      console.log(result);
+    });
     const userToken = JSON.parse(localStorage.getItem('token')) as TokenGlobo;
 
     if(userToken){

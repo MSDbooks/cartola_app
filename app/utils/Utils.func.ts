@@ -1,12 +1,11 @@
+import { Injectable } from '@angular/core';
 
-
-
+@Injectable()
 export class Utils{
 
-    static getCurrentTokenURL():string
+    static getBaseUrl()
     {
-        let url ="";
-        return url;
+        return "https://api.cartolafc.globo.com/mercado";
     }
 
 
