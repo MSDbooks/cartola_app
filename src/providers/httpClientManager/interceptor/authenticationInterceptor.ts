@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse, HttpErrorResponse } from "@angular/common/http";
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
-import { TokenGlobo } from './../../../model/auth-modal';
+import { TokenGlobo } from "../../../../app/model/auth-modal";
 
 
 @Injectable()

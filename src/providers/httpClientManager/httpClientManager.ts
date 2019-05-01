@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from "@angular
 import { Platform } from 'ionic-angular';
 
 import { Network } from "@ionic-native/network/ngx";
-import { LoggingService } from 'loggerservice';
+
 
 
 @Injectable()
@@ -12,7 +12,6 @@ export class HttpClientManager {
 
     constructor(
         private httpClient: HttpClient,
-        private loggerService: LoggingService,
         private network: Network,
         private platform: Platform) {
     }
@@ -74,9 +73,8 @@ export class HttpClientManager {
             return;
         }
 
-        if (this.network.type === 'unknown'
-            || this.network.type === 'none'
-            || !this.network.type) {
+        if (!this.network.type || this.network.type === 'unknown'
+            || this.network.type === 'none') {
             return true;
         }
         else {

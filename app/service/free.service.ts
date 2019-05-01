@@ -39,8 +39,8 @@ export class FreeService {
     }
 
     getStatusMercado(): Promise<any>{
-debugger
-      let url = `https://api.cartolafc.globo.com/mercado/status`;
+
+      let url = `${Utils.getBaseUrl()}/status`;
       url
 
       let header = new Headers();

@@ -7,7 +7,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { InAppBrowser, InAppBrowserOptions, InAppBrowserEvent } from '@ionic-native/in-app-browser';
 import { RequestOptions, Http, Headers } from '@angular/http';
-import { Token } from '@angular/compiler';
+
 import { TokenGlobo } from '../../../app/model/auth-modal';
 
 

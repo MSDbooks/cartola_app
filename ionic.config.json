@@ -9,6 +9,5 @@
       "path": "/api",
       "proxyUrl": "http://abc.localhost/api/"
     }
-  ],
-  "app_id": ""
+  ]
 }
