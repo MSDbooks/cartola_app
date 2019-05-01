@@ -5,7 +5,7 @@ export class Utils{
 
     static getBaseUrl()
     {
-        return "https://api.cartolafc.globo.com/mercado";
+        return "https://api.cartolafc.globo.com/";
     }
 
 
