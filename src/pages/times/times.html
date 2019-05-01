@@ -18,13 +18,20 @@
     <button ion-item *ngFor="let time of times">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-avatar item-center>
+          <ion-col col-3 class="escudo">
               <img [src]="time.url_escudo_png">
-            </ion-avatar>
           </ion-col>
           <ion-col>
-            <h6>Time: {{time.nome}}</h6>
+            <ion-row>
+              <ion-col>
+                  <h6>{{time.nome}}</h6>
+              </ion-col>
+            </ion-row>
+           <ion-row>
+             <ion-col>
+                <h6>{{time.nome_cartola}}</h6>
+             </ion-col>
+           </ion-row>
           </ion-col>
         </ion-row>
       </ion-grid>

@@ -22,7 +22,7 @@ export class TimesPage {
 
   onInput(ev) {
 
-    if( ev._value) {
+    if( ev._value && ev._value.length > 3) {
 
       this.freeService.getBuscarTime(ev._value).then((_times:TimeMiniInfo[])=>{
         this.times = _times;
