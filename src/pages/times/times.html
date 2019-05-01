@@ -12,7 +12,24 @@
     (ionChange)="onInput($event)"
     (ionCancel)="onCancel($event)">
   </ion-searchbar>
-  <div>Nenhum time encontrado...</div>
+  <div *ngIf="this.times.length == 0">Nenhum time encontrado...</div>
+
+  <ion-list>
+    <button ion-item *ngFor="let time of times">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-avatar item-center>
+              <img [src]="time.url_escudo_png">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <h6>Time: {{time.nome}}</h6>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </button>
+  </ion-list>
 
 
 </ion-content>

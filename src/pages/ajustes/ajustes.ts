@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
 
@@ -17,17 +17,17 @@ export class AjustesPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private alertCtrl: AlertController
-  ) 
+  )
   {
-    
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AjustesPage');
   }
 
-  
- 
+
+
 
   presentAlert(text: string, ) {
     let alert = this.alertCtrl.create({
