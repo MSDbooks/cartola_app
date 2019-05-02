@@ -10,6 +10,7 @@ import { TimeMiniInfo } from '../../models/TimeMiniInfo';
 export class TimesPage {
 
   public times: TimeMiniInfo[];
+  public content: string;
 
   constructor(
     public navCtrl: NavController,
@@ -17,6 +18,7 @@ export class TimesPage {
     )
      {
         this.times = new Array();
+        this.content = 'BUSCAR';
      }
 
 
@@ -31,6 +33,12 @@ export class TimesPage {
       .catch(err=> console.error('Falha ao buscar time ', err))
 
     }
+
+  }
+
+  addTime(time:TimeMiniInfo ) {
+
+    time.isTimeAdd = !time.isTimeAdd;
 
   }
 

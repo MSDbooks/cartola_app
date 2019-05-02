@@ -4,39 +4,50 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-searchbar
-    placeholder="Buscar time..."
-    [(ngModel)]="myInput"
-    [showCancelButton]="Cancelar"
-    (ionChange)="onInput($event)"
-    (ionCancel)="onCancel($event)">
-  </ion-searchbar>
-  <div *ngIf="this.times.length == 0">Nenhum time encontrado...</div>
+<ion-content no-padding>
+  <ion-segment [(ngModel)]="content">
+    <ion-segment-button value="BUSCAR">Buscar</ion-segment-button>
+    <ion-segment-button value="TIMES">Times</ion-segment-button>
+  </ion-segment>
 
-  <ion-list>
-    <button ion-item *ngFor="let time of times">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-3 class="escudo">
-              <img [src]="time.url_escudo_png">
-          </ion-col>
-          <ion-col>
+  <div [ngSwitch]="content">
+
+    <div *ngSwitchCase="'BUSCAR'">
+      <ion-searchbar placeholder="Buscar time..." [(ngModel)]="myInput" [showCancelButton]="Cancelar"
+        (ionChange)="onInput($event)" (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+      <div style="padding-top: 10px" *ngIf="this.times.length == 0">Nenhum time encontrado...</div>
+
+      <ion-list>
+        <button class="btn-item" (click)="addTime(time)" ion-item *ngFor="let time of times">
+          <ion-grid>
             <ion-row>
+              <ion-col col-3 class="escudo">
+                <img [src]="time.url_escudo_png">
+              </ion-col>
               <ion-col>
-                  <h6>{{time.nome}}</h6>
+                <ion-row>
+                  <ion-col>
+                    <h6>{{time.nome}}</h6>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                    <h6>{{time.nome_cartola}}</h6>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col col-2 class="item-checkbox">
+                 <ion-item>
+                    <ion-checkbox [(ngModel)]="isTimeAdd" color="dark"  checked="false"></ion-checkbox>
+                 </ion-item>
+
               </ion-col>
             </ion-row>
-           <ion-row>
-             <ion-col>
-                <h6>{{time.nome_cartola}}</h6>
-             </ion-col>
-           </ion-row>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </button>
-  </ion-list>
-
+          </ion-grid>
+        </button>
+      </ion-list>
+    </div>
+  </div>
 
 </ion-content>

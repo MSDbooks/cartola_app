@@ -1,12 +1,26 @@
 page-times {
 
+
+ .label{
+    margin: 0;
+ }
+
   img {
     max-width: 80%;
     border: 0;
-}
+  }
 
-.escudo{
-  text-align: center;
-}
+  .escudo{
+    text-align: center;
+  }
+
+  ion-searchbar{
+    margin-top: 10px;
+  }
+
+  .item-checkbox{
+    display: flex;
+    align-items: center;
+  }
 
 }
